@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow isMain="true">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель разделов">
+				<CommandInterfaceButton title="Продажи">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Меню функций">
+				<CommandInterfaceButton title="Заказы">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+		</CommandInterface>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Заказы товаров">
+		<Form title="Заказы товаров">
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаСоздать" title="Создать">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Заказ (создание)">
+		<Form title="Заказ (создание)">
+			<FormGroup name="Шапка" title="Шапка">
+				<FormGroup name="ЛеваяКолонка" title="Левая колонка">
+					<FormField name="Организация" title="Организация">
+						<activate/>
+						<openDropList/>
+						<executeChoiceFromChoiceList presentation="ООО &quot;1000 мелочей&quot;"/>
+					</FormField>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Заказ (создание) *">
+		<Form title="Заказ (создание) *">
+			<FormGroup name="Шапка" title="Шапка">
+				<FormGroup name="ЛеваяКолонка" title="Левая колонка">
+					<FormGroup name="ГруппаПокупатель" title="Группа покупатель">
+						<FormField name="Покупатель" title="Покупатель">
+							<activate/>
+							<executeChoiceFromChoiceList presentation="Магазин &quot;Продукты&quot;"/>
+						</FormField>
+					</FormGroup>
+					<FormField name="Склад" title="Склад">
+						<activate/>
+						<startChoosing/>
+						<executeChoiceFromChoiceList presentation="Большой"/>
+					</FormField>
+				</FormGroup>
+			</FormGroup>
+			<FormGroup name="ГруппаТовары" title="Товары">
+				<FormTable name="Товары" title="Товары">
+					<FormGroup name="ТоварыКоманднаяПанель" title="Командная панель">
+						<FormButton name="ТоварыДобавить" title="Добавить">
+							<click/>
+						</FormButton>
+					</FormGroup>
+					<FormField name="ТоварыТовар" title="Товар">
+						<executeChoiceFromChoiceList presentation="Босоножки"/>
+					</FormField>
+					<gotoNextItem/>
+					<FormField name="ТоварыКоличество" title="Количество">
+						<activate/>
+						<inputText text="5"/>
+					</FormField>
+					<gotoNextItem/>
+					<endEditRow cancel="false"/>
+				</FormTable>
+			</FormGroup>
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаПровестиИЗакрыть" title="Провести и закрыть">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Заказы товаров">
+		<close/>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow startPage="true">
+		<close/>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow isMain="true">
+		<close/>
+	</ClientApplicationWindow>
+</uilog>
