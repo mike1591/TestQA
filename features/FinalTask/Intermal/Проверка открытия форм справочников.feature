@@ -1,5 +1,4 @@
-﻿
-#language: ru
+﻿#language: ru
 
 @tree
 @БыстрыеПроверки

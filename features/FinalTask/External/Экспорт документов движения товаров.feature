@@ -1,5 +1,5 @@
 ﻿#language: ru
-@дерево   
+@дерево 
 @ExportScenarios
 @IgnoreOnCIMainBuild
 
